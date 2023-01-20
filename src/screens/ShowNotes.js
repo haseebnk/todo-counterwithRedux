@@ -9,7 +9,7 @@ const ShowNotes = ({ route, navigation }) => {
    
     const data = useSelector((state)=> state.todo)
     const {note2} = route.params
-    const [id, setfirst] = useState(note2.id)
+    // const [id, setfirst] = useState(note2.id)
     console.log(id,"data.find")
 
    useEffect(() => {
@@ -31,8 +31,12 @@ const ShowNotes = ({ route, navigation }) => {
 
 
             </View>
-
-            <MaterialIcons onPress={() => navigation.navigate('EditNote', {note})} style={{ alignSelf: 'center' }} name='edit' size={hp('7%')} color="white" />
+            <TouchableOpacity onPress={() => navigation.navigate('EditNote', {note})}> 
+                <Text style={{color:'white', alignSelf:'center', fontSize:30}}>
+                    Edit
+                </Text>
+            </TouchableOpacity>
+            {/* <MaterialIcons onPress={() => navigation.navigate('EditNote', {note})} style={{ alignSelf: 'center' }} name='edit' size={hp('7%')} color="white" /> */}
         </View>
         // </ImageBackground>
 

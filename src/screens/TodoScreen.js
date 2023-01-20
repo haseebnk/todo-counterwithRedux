@@ -45,13 +45,13 @@ function TodoScreen({ navigation }) {
                                 <TouchableOpacity
                                  onPress={()=>dispatch({type:"Remove" ,payload:item.id })} 
                                 >
-                                <Text>Delete</Text>
+                                <Text style={{color:'white', alignSelf:'center', fontSize:30}}>Delete</Text>
                                 </TouchableOpacity>
                                 {/* <MaterialIcons onPress={{}} style={{ alignSelf: 'center' }} name='delete-forever' size={hp('5%')} color="white" /> */}
-                                <TouchableOpacity
+                                {/* <TouchableOpacity
                                    onPress={()=>navigation.navigate('EditNote', { item })} >
                                 <Text>Edit</Text>
-                                </TouchableOpacity>
+                                </TouchableOpacity> */}
                             </View>
                         </TouchableOpacity>
                     )
